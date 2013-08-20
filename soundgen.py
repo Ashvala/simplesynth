@@ -28,16 +28,16 @@ def freq_gen(freq, file, octave, sin_wave_move):
 #Fundamental Frequencies
 
 C = 32
-CSharp = 35
+Csharp = 35
 D = 37
-DSharp = 39
+Dsharp = 39
 E = 41
 F = 44
-FSharp = 46
+Fsharp = 46
 G = 49
-GSharp = 51
+Gsharp = 51
 A = 55
-ASharp = 58
+Asharp = 58
 B = 62
 C2 = 65
 
@@ -49,7 +49,7 @@ Gflat = Fsharp
 Aflat = Gsharp
 Bflat = Asharp
 
-note_list = [C,D,E,F,G, A, B, C2]
+note_list = [C,Dflat,E,F,G, A, B, C2]
 
 freq_gen(note_list, "t1.wav", 4, 6)
 
