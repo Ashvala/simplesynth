@@ -28,8 +28,9 @@ def freq_gen(freq, file, octave, sin_wave_move):
       print ".",
   wav_file.close()
 
+#Arpeggiator of Majors!
 def note_arp(note_name):
-  arp=[note_name, note_name + 10, note_name + 19]
+  arp=[note_name, note_name + 10, note_name + 20, note_name + 10, note_name]
   return arp
 
 #Fundamental Frequencies
@@ -56,7 +57,7 @@ Gflat = Fsharp
 Aflat = Gsharp
 Bflat = Asharp
 
-note_list = note_arp(C*3)
+note_list = note_arp(C*2) + note_arp(F*2) + note_arp(G*2) + note_arp(G*2) + note_arp(F*2) + note_arp(C*2)
 
 freq_gen(note_list, "t1.wav", 4, 6)
 
