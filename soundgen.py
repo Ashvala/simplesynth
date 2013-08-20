@@ -25,7 +25,6 @@ def freq_gen(freq, file, octave, sin_wave_move):
   print "Generating!"
   for s in sines:
       wav_file.writeframes(struct.pack('h', int(s*amp/2)))
-      print ".",
   wav_file.close()
 
 #Arpeggiator of Majors!
