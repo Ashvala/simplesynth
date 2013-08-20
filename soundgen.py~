@@ -7,7 +7,7 @@ import sys
 # Given a Note, I should be able to arpeggiate its corresponding major chord.
 
 def freq_gen(freq, file, octave, sin_wave_move):
-  size = 4000
+  size = 10000
   frate = 11025.0
   amp = 8000.0
   new_list = [x*octave for x in freq]
