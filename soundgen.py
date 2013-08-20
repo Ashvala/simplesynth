@@ -25,6 +25,7 @@ def freq_gen(freq, file, octave, sin_wave_move):
       print ".",
   wav_file.close()
 
+#Fundamental Frequencies
 
 C = 32
 CSharp = 35
@@ -39,6 +40,14 @@ A = 55
 ASharp = 58
 B = 62
 C2 = 65
+
+#Enharmonic schtuff
+
+Dflat = Csharp
+EFlat = Dsharp
+Gflat = Fsharp
+Aflat = Gsharp
+Bflat = Asharp
 
 note_list = [C,D,E,F,G, A, B, C2]
 
