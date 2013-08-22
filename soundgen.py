@@ -32,29 +32,26 @@ Aflat = Gsharp
 Bflat = Asharp
 
 def freq_gen(freq, file, octave, sin_wave_move,size_list):
+  size = 800
   frate = 11025.0
   amp = 8000.0
+  new_list = [x*octave for x in freq]
+
+  sines = []
+  for y in new_list:
+    for x in range(size):
+      sines.append(math.sin(sin_wave_move*math.pi*y*(x/frate)))
+  wav_file = wave.open(file, "w")
+
   nchannels = 1
   samples = 2
-
   framer = int(frate)
-
-
-  for size in size_list:
-    new_list = [x*octave for x in freq]
-
-    sines = []
-    for y in new_list:
-      for x in range(size):
-        sines.append(math.sin(sin_wave_move*math.pi*y*(x/frate)))
-        wav_file = wave.open(file, "w")
-
-    
   wav_file.setparams((nchannels, samples, framer, size, "NONE", "not compressed"))
   print "Generating!"
   for s in sines:
       wav_file.writeframes(struct.pack('h', int(s*amp/2)))
   wav_file.close()
+
 
 # Arpeggiator of Major chords!
 def note_arp(note_name):
