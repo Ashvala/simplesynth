@@ -8,11 +8,7 @@ import sys
 
 filename = sys.argv[1]
 frate = 11025
-quarter_note = 4000
-half_note = 8000
-whole_note = 16000
-eighth = 2000
-sixteenth = 1000
+
 
 # The Fundamental Frequencies: A=55, r=1.0594 = exp(log(2)/12)
 
@@ -30,7 +26,7 @@ Asharp=Bflat=58.27
 B=61.74
 C2=65.41
 
-##
+#Function that saves to a wave file
 
 def save_as_wav(file, lst, size):
   amp = 8000.0
@@ -43,6 +39,8 @@ def save_as_wav(file, lst, size):
       wav_file.writeframes(struct.pack('h', int(s*amp/2)))
   wav_file.close()
   print "Saved to ", file
+  
+#Calculate the sines...
 
 def freq_gen(freq, octave, sin_wave_move,size):
   actual_freq = [x*octave for x in freq]
