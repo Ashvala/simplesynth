@@ -12,3 +12,17 @@ Usage example:
 
 note_list = [C,CSharp, Dsharp, E, Fsharp, G]
 
+To indicate that a note should be played up an octave, multiply it by 2.
+
+Example:
+
+note_list = [C*2]
+
+Going down an octave is a matter of dividing the note frequency by 2.
+
+Example: 
+
+note_list = [((C*4)/2)]
+
+
+
