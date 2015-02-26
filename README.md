@@ -1,7 +1,7 @@
-Stupid Simple Synth!
+Simple Synth!
 =================
 
-The idea is to write a really stupidly simple synth in python that can work over the command line.
+The idea is to write a really simple synth in python that can work over the command line.
 
 Usage:
 ================
